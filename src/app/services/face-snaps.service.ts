@@ -1,7 +1,6 @@
 import {Injectable} from "@angular/core";
 import {FaceSnap} from "../models/face-snap";
 import {SnapType} from "../models/snap-type.type";
-import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -56,7 +55,6 @@ export class FaceSnapsService {
     if (location != null) {
       faceSnap.location = location;
     }
-
-    let number = this._faceSnaps.push(faceSnap);
+    this._faceSnaps.push(faceSnap);
   }
 }
